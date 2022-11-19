@@ -18,4 +18,4 @@ async def get_page(request):
     return static_file("./index.html")
 
 
-app.start(url="0.0.0.0",port=PORT)    
+app.start(port=PORT)    

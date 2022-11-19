@@ -1,22 +1,8 @@
-from robyn import Robyn, static_file
-from dotenv import load_dotenv
-import os
+if __name__ == "__main__":
 
-load_dotenv()
+    from robyn import Robyn
+    from dotenv import load_dotenv
+    import os
 
-
-app = Robyn(__file__)
-
-
-@app.get("/hello")
-async def h(request):
-    print(request)
-    return "Hello, world!"
-
-
-@app.get("/")
-async def get_page(request):
-    return static_file("./index.html")
-
-
-app.start(port=5000, url="0.0.0.0")    
+    load_dotenv()
+    Robyn.start(url="0.0.0.0", port=PORT)    

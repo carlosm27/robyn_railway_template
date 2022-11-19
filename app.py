@@ -1,9 +1,4 @@
 from robyn import Robyn, static_file
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
 
 app = Robyn(__file__)
 
